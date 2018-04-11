@@ -1,0 +1,275 @@
+/* Heidi Chaves
+ * Este CSS muestra de forma básica el uso de la estructura de las
+ * hojas de estilo.
+ *
+ * No se usan temas de responsive design ni temas de frameworsk.
+ *
+ * Ya que el objetivo es entregar una estructura básica y entendible
+ * al estudiante para que pueda empezar a entender el uso de las hojas 
+ * de estilo y pueaa empezar a diseñar páginas más estructuradas.
+ *
+ * 
+ * */
+
+ /*Root o raíz*/
+ *{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: monospace;
+}
+
+/* Por produndidad de la caja y priorización de la misma se adiciona el box de chat despues de la raíz*/
+
+#chat{
+	position: fixed;
+	width: 200px;
+	height: 40px;
+	bottom: 0;
+	right: 20px;
+	background: magenta;
+	z-index: 1;/*manipular las cajas en ejes de produndidad*/
+	color:white;
+	text-align: center;
+	line-height: 40px;
+	font-family: fantasy;
+	font-size: 20px;
+	border-radius: 20px 20px 0 0;
+	cursor: pointer;
+}
+
+ /*Position me ubicará las cajas dentro de la diagramacion web */
+ header{/*caja externa*/
+ 	position: relative;
+ 	margin: auto; /*top - left = 20px - 30px*/
+ 	width: 1000px;
+ 	height: 120px;
+ 	background: rgba(204,204,204,0.5);
+ 	color: #F77E08;/*color de la letra*/
+ 	margin: 20px auto;
+ }
+	#logo{
+		position: absolute;/*unicar interna dentro de una caja principal*/
+		top: 30px;
+		left: 30px;
+		/*bottom: 0;
+		right: 0;*/
+		width: 200px; /*ancho*/
+		height: 60px; /*alto*/
+		line-height: 60px;/*alineacion igual a la de height*/
+		background: #444;
+		font-family: 'Pacifico', cursive;/*font de google*/
+		font-size: 33px;/*tamaño del texto*/
+		text-align: center;
+	}
+		.redes{
+			position: absolute;/*unicar interna dentro de una caja principal*/
+			width: 42px; /*ancho*/
+			height: 42px; /*alto*/
+			background: #ccc;
+			border-radius: 100%;
+			text-align: center;
+			line-height: 42px;
+		}
+		#icono1{
+			top: 42px;
+			right: 120px;
+			background: blue;
+			color:black;
+		}
+		#icono2{
+			top: 42px;
+			right: 71px;
+			background: green;
+			color:black;
+		}
+		#icono3{
+			top: 42px;
+			right: 19px;
+			background: #BB23D6;
+			color:black;
+		}
+
+ nav{/*caja externa*/
+ 	position: relative;
+ 	margin: auto; 
+ 	width: 1000px;
+ 	height: 48px;
+ 	background: rgba(204,204,204,0.5);
+ }
+	 .botones{
+		float: left;/*hace flotar listado de vertical a horizontal*/
+		/*width: 200px; como le quita 2px de margen, ya serían 196px*/
+		width: 196px;
+		height: 48px;
+		line-height: 48px;
+		background: #333;
+		margin: 0px 2px;
+		color: pink;
+		font-family: 'Pacifico', cursive;
+		text-align: center;
+		/*border: 1px solid white;*/
+	}
+
+		/* llamar clase con una seudoclase hover, cuando pasa el mouse cambia el color*/
+		a .botones:hover{
+			background: rgba(100,0,255,0.4);
+		}
+		a .botones:active{
+			background: rgba(255,0,100,1);
+		}
+
+#top{/*caja externa*/
+ 	position: relative;
+ 	margin: 20px auto; 
+ 	width: 1000px;
+ 	height: 192px;
+ 	background: rgba(204,204,204,0.5);
+ }
+
+	 /* Seleccion por ruta:
+	  * Llamar el div top que tiene el id="top";
+	  * luego dirigirnos al ul
+	  * Luego dirigirnos al li
+	  * Todo quedara para #top ul li; es como si hubiera puesto una clase
+	  * */
+	 #top ul{
+	 	width: 1010px;
+	 	height: 192px;
+	 	/*background: rgba(0,0,255, 0.5); esto era de prueba para validar los 326 de width en #top ul li*/
+	 }
+
+		 #top ul li{
+			float: left;
+			/*width: 333px;*/
+			width: 326px;
+			height: 192px;
+			background: gray;
+			color:blue;
+			margin-right: 10px;
+			text-align: center;
+		 }
+			#top ul li img{
+			 	border-radius: 100%;
+			 	height: 100px;
+			 }
+			#top ul li h2{
+			  	font-family: 'Pacifico', cursive;
+			}
+			#top ul li p{
+			  	font-size: 14px;
+			  	margin: 10px;
+			}
+
+section{/*caja externa*/
+ 	position: relative;
+ 	margin: auto; 
+ 	width: 1000px;
+ 	height: 453px;
+ 	background: rgba(204,204,204,0.5);
+}
+ 	/* Una caja en css es llamar el nombre de la etiqueta y de seguido llamar su nombre id. */
+	aside#izq{/* pegado hace parte de la misma caja*/
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 200px;
+		height: 453px;
+		background: #333;
+		color: yellow;
+	}
+		aside#izq ul li{
+			background: #aaa;
+			padding: 10px;
+			margin: 2px 10px;
+			list-style: square;
+			list-style-position: inside;
+			list-style-image: url(../img/lista.png);
+
+		}
+			aside#izq ul li a{
+				text-decoration: none;/*para q no tenga la linea abajo*/
+			}
+article{
+	position: absolute;
+	left: 200px;
+	top: 0;
+	width: 600px;
+	height: 453px;
+	background: #666;
+	color:white;
+}
+	article h2{
+		font-family: 'Pacifico', cursive;
+		font-size: 40px;
+		margin: 20px;
+		color:red;
+		
+	}
+	article p{
+		margin:5px 20px;
+		font-size: 14px;
+		text-align: justify;
+	}
+		article p img{
+			float: left;
+			margin-right: 20px;
+
+		}
+aside#der{/* pegado hace parte de la misma caja*/
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 200px;
+	height: 453px;
+	background: #333;
+	color: #FCF905;
+}
+	aside#der h3{
+		width: 200px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		background: rgba(100,0,255, 0.5);
+		color: white;
+		margin-bottom: 5px;
+	}
+	aside#der input{
+		padding: 10px;
+		margin: 5px 0;
+		width: 176px;
+	}
+		/*atributo type="text" */
+		aside#der input[type="text"]{
+			background: url(../img/usuario.png);
+			background-repeat: no-repeat;
+			background-position: right;
+			background-size: contain;
+		}
+		aside#der input[type="password"]{
+			background: url(../img/password.png);
+			background-repeat: no-repeat;
+			background-position: right;
+			background-size: contain;
+		}
+		aside#der input[type="email"]{
+			background: url(../img/mail.png);
+			background-repeat: no-repeat;
+			background-position: right;
+			background-size: contain;
+		}
+		aside#der input[type="submit"]{
+			width: 200px;
+			background: pink;
+			border:0;
+		}
+footer{/*caja externa*/
+ 	position: relative;
+ 	margin: 20px auto; 
+ 	width: 1000px;
+ 	height: 70px;
+ 	line-height: 70px;
+ 	background: #aaa;
+ 	text-align: center;
+}
+
